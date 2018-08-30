@@ -1,0 +1,8 @@
+.BookList td, tr {
+	padding: 0 10px;
+	text-align: left;
+}
+
+.heading {
+	text-decoration: underline;
+}
