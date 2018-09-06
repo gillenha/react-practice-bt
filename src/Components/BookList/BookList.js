@@ -1,10 +1,10 @@
 import React from 'react';
-import Auxil from '../../hoc/Auxil';
+// import BookListItem from '../BookListItem/BookListItem';
 import './BookList.css';
 
 const BookList = (props) => {
 	return (
-		<Auxil>
+		<div>
 			<table>
 				<tbody>
 					<tr className="heading">
@@ -23,7 +23,7 @@ const BookList = (props) => {
 					))}
 				</tbody>
 			</table>
-		</Auxil>
+		</div>
 	);
 }
 

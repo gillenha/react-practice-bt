@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import Modal from '../UI/Modal/Modal';
 import AddBook from '../Components/AddBook/AddBook';
 import BookList from '../Components/BookList/BookList';
-import Auxil from '../hoc/Auxil';
-// import './BookTracker.css';
 
 class BookTracker extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
+		state = {
 			books: [
 				{ id: "1", 
 					name: "The Wheel of Time", 
@@ -35,32 +29,16 @@ class BookTracker extends Component {
 					name: "The Lord of the Rings", 
 					author: "JRR Tolkein", 
 					length: 145, 
-					finished: true },
-			],
-			modalOpen: false,
+					finished: true }
+			]
 		}
-	}
-
-	toggleModal = () => {
-		this.setState({
-			modalOpen: !this.state.modalOpen
-		});
-	}
 
 	render() {
 		return (
-			<Auxil className="App">
-				<BookList
-					books={this.state.books} />
-					<Modal
-						show={this.state.modalOpen}
-						onClose={this.toggleModal}>
-						<AddBook />
-					</Modal>
-				<button 
-					type="button"
-					onClick={this.toggleModal}>Add Book</button>
-			</Auxil>
+			<div className="App">
+				<BookList books={this.state.books} />
+				<AddBook />
+			</div>
 		)
 	}
 }
